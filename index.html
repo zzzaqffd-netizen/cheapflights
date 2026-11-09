@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta name="description" content="Find your next getaway with CheapFlights. Compare inspiring flight deals and plan a trip that fits your budget.">
+  <title>CheapFlights — Your next adventure, for less</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="CheapFlights home"><span class="brand-mark" aria-hidden="true">✈</span><span>cheap<span class="brand-accent">flights</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Flights</a>
+      <a class="nav-link" href="#deals">Explore</a>
+      <a class="nav-link" href="#how-it-works">How it works</a>
+    </nav>
+    <a class="header-cta" href="#search">Find a flight <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> GOOD TRIPS. BETTER PRICES.</div>
+        <h1>The world is closer<br>than <span>you think.</span></h1>
+        <p>Big plans, little prices. Find a flight that gets you there without taking you over budget.</p>
+        <div class="hero-proof"><div class="proof-avatars" aria-hidden="true"><span>J</span><span>M</span><span>A</span><span>+</span></div><span><strong>12k+</strong> travelers found their fare</span><span class="proof-divider"></span><span class="proof-rating">★ 4.9</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a sunny island getaway">
+        <div class="sun"></div><div class="art-cloud cloud-one"></div><div class="art-cloud cloud-two"></div>
+        <div class="art-island"><div class="island-hill"></div><div class="palm palm-one"><i></i><b></b><em></em></div><div class="palm palm-two"><i></i><b></b><em></em></div></div>
+        <div class="art-water"></div><div class="flight-path"></div><div class="art-plane">✈</div>
+        <div class="destination-tag"><span class="tag-pin">⌖</span><span><strong>Bali, Indonesia</strong><small>Feels like a dream</small></span><span class="tag-sparkle">✦</span></div>
+        <div class="floating-note"><span>✦</span> Your next story starts here</div>
+      </div>
+    </section>
+
+    <section class="search-section" id="search" aria-labelledby="search-heading">
+      <div class="search-heading-row"><div><div class="section-kicker">LET'S GET YOU THERE</div><h2 id="search-heading">Where to next?</h2></div><span class="secure-note"><span>✓</span> No booking fees. Just good finds.</span></div>
+      <form class="search-card" id="flight-search">
+        <div class="trip-options" role="group" aria-label="Trip type"><label class="radio-option"><input type="radio" name="trip" value="roundtrip" checked><span class="custom-radio"></span> Round trip</label><label class="radio-option"><input type="radio" name="trip" value="oneway"><span class="custom-radio"></span> One way</label><label class="radio-option"><input type="radio" name="trip" value="multicity"><span class="custom-radio"></span> Multi-city</label></div>
+        <div class="search-fields">
+          <label class="field location-field"><span class="field-icon">⌖</span><span class="field-content"><span class="field-label">FROM</span><input id="origin" name="origin" autocomplete="off" placeholder="City or airport" value="New York (NYC)" required></span></label>
+          <button type="button" class="swap-button" id="swap-cities" aria-label="Swap origin and destination">⇄</button>
+          <label class="field location-field"><span class="field-icon destination-icon">⌖</span><span class="field-content"><span class="field-label">TO</span><input id="destination" name="destination" autocomplete="off" placeholder="Where to?" required></span></label>
+          <label class="field date-field"><span class="field-icon">▦</span><span class="field-content"><span class="field-label">DEPART</span><input id="depart-date" name="depart" type="date" required></span></label>
+          <label class="field date-field return-field"><span class="field-icon">▦</span><span class="field-content"><span class="field-label">RETURN</span><input id="return-date" name="return" type="date"></span></label>
+          <label class="field passenger-field"><span class="field-icon">♙</span><span class="field-content"><span class="field-label">TRAVELERS</span><select name="travelers" id="travelers"><option value="1">1 traveler</option><option value="2">2 travelers</option><option value="3">3 travelers</option><option value="4">4 travelers</option><option value="5">5+ travelers</option></select></span></label>
+        </div>
+        <div class="search-bottom"><label class="nonstop-check"><input type="checkbox" id="nonstop"><span class="checkmark"></span> Nonstop flights only</label><button class="search-button" type="submit"><span>Search flights</span><span class="button-arrow">→</span></button></div>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="deals-section" id="deals">
+      <div class="section-heading"><div><div class="section-kicker">A LITTLE INSPIRATION</div><h2>Popular right now</h2><p>Hand-picked fares for wherever you're dreaming of.</p></div><a class="text-link" href="#search">Explore all destinations <span>→</span></a></div>
+      <div class="deal-grid">
+        <a class="deal-card" href="#search" data-destination="Lisbon (LIS)"><div class="deal-image lisbon"><span class="deal-badge">BEST VALUE</span><span class="image-label">LISBON, PORTUGAL</span></div><div class="deal-info"><div><h3>Lisbon</h3><span class="deal-meta">Round trip · Economy</span></div><div class="deal-price"><small>from</small><strong>$389</strong></div></div><div class="deal-card-foot"><span>☀ 24° right now</span><span>See deal <b>↗</b></span></div></a>
+        <a class="deal-card" href="#search" data-destination="Tokyo (TYO)"><div class="deal-image tokyo"><span class="deal-badge">TRAVELER FAVORITE</span><span class="image-label">TOKYO, JAPAN</span></div><div class="deal-info"><div><h3>Tokyo</h3><span class="deal-meta">Round trip · Economy</span></div><div class="deal-price"><small>from</small><strong>$642</strong></div></div><div class="deal-card-foot"><span>✿ Spring looks good on you</span><span>See deal <b>↗</b></span></div></a>
+        <a class="deal-card" href="#search" data-destination="Mexico City (MEX)"><div class="deal-image mexico"><span class="deal-badge">QUICK GETAWAY</span><span class="image-label">MEXICO CITY, MEXICO</span></div><div class="deal-info"><div><h3>Mexico City</h3><span class="deal-meta">Round trip · Economy</span></div><div class="deal-price"><small>from</small><strong>$278</strong></div></div><div class="deal-card-foot"><span>♡ Culture, color & tacos</span><span>See deal <b>↗</b></span></div></a>
+      </div>
+      <p class="fare-disclaimer">Fares shown are sample prices for inspiration and may change. Final prices are set by the airline or booking provider.</p>
+    </section>
+
+    <section class="why-section" id="how-it-works"><div class="why-intro"><div class="section-kicker">TRAVEL, MADE SIMPLE</div><h2>More adventure.<br><span>Less airfare.</span></h2><p>We make finding a good flight feel like the start of the trip—not a chore.</p></div><div class="why-points"><article><span class="point-icon mint">⌕</span><div><h3>Compare in a click</h3><p>See options side by side and choose what works for your trip.</p></div></article><article><span class="point-icon peach">♡</span><div><h3>Prices worth celebrating</h3><p>We surface wallet-friendly fares so you can save for the fun stuff.</p></div></article><article><span class="point-icon lilac">↗</span><div><h3>Your trip, your way</h3><p>Pick your dates, your destination, and the pace that feels right.</p></div></article></div></section>
+    <section class="bottom-cta"><div><span class="cta-spark">✦</span><h2>Somewhere is calling.</h2><p>Let's find a fare that gets you there.</p></div><a href="#search" class="cta-button">Find my flight <span>→</span></a><span class="cta-plane" aria-hidden="true">✈</span></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">✈</span><span>cheap<span class="brand-accent">flights</span></span></a><span>Go places. Keep change.</span><span>© <span id="year"></span> CheapFlights · Fares shown for inspiration only.</span></footer>
+</body>
+</html>
